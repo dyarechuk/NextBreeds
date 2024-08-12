@@ -1,7 +1,7 @@
 import { BreedsList } from '@/components/BreedsList';
 import { fetchCats, fetchDogs } from '@/utils/api';
 
-export const HomePage = async () => {
+export default async function HomePage() {
   const cats = await fetchCats();
   const dogs = await fetchDogs();
 
@@ -16,4 +16,3 @@ export const HomePage = async () => {
   );
 };
 
-export default HomePage;
