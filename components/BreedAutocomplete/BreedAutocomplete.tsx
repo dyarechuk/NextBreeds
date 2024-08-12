@@ -1,3 +1,4 @@
+'use client';
 import { Breed } from '@/types/breeds';
 import { debounce } from 'lodash';
 import { CircleX } from 'lucide-react';
@@ -64,7 +65,7 @@ export const BreedAutocomplete: React.FC<BreedAutocompleteProps> = ({
   };
 
   return (
-    <div className="fixed w-full z-10">
+    <div className="fixed w-full z-10 top-0 left-0">
       <div className="relative">
         <label className="relative">
           <input

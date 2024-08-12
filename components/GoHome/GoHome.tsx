@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const GoHome = () => {
   return (
-    <div className="bg-gray-300 p-4">
+    <div className="bg-gray-300 p-4 absolute top-0 left-0">
       <Link href="/" className="inline-block">
         <House
           size={50}

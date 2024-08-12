@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { Breed } from '@/types/breeds';
-import ReactDOM from 'react-dom';
 import { BreedAutocomplete } from '../BreedAutocomplete';
 import { BreedCard } from '../BreedCard';
+
 interface BreedsListProps {
   cats: Breed[];
   dogs: Breed[];
@@ -25,16 +25,11 @@ export const BreedsList: React.FC<BreedsListProps> = ({ cats, dogs }) => {
 
   return (
     <div className="mx-auto px-10">
-      {ReactDOM.createPortal(
-        <BreedAutocomplete
-          cats={cats}
-          dogs={dogs}
-          setFilteredBreeds={(breeds) =>
-            setFilteredBreeds(shuffleArray(breeds))
-          }
-        />,
-        document.body,
-      )}
+      <BreedAutocomplete
+        cats={cats}
+        dogs={dogs}
+        setFilteredBreeds={(breeds) => setFilteredBreeds(shuffleArray(breeds))}
+      />
       <div className="text-center text-3xl text-slate-900 mt-20 mb-6 font-semibold">
         Breeds
       </div>

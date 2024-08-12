@@ -2,7 +2,6 @@
 
 import { Breed } from '@/types/breeds';
 import React, { useEffect } from 'react';
-import { createPortal } from 'react-dom';
 import { GoHome } from '../GoHome';
 import Carousel from '../Carousel/Carousel';
 
@@ -12,10 +11,6 @@ interface BreedDetailsProps {
 
 export const BreedDetails: React.FC<BreedDetailsProps> = ({ breedDetails }) => {
   const temperaments = breedDetails.temperament.split(', ');
-  const bredFors = breedDetails.bred_for?.split(', ');
-  const [portalContainer, setPortalContainer] = React.useState<HTMLElement>(
-    document.body,
-  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,8 +21,8 @@ export const BreedDetails: React.FC<BreedDetailsProps> = ({ breedDetails }) => {
   }
 
   return (
-    <div className="flex flex-col container lg:py-20 text-xl">
-      {createPortal(<GoHome />, portalContainer)}
+    <div className="flex flex-col container py-20 text-xl">
+      <GoHome />
       <div className="text-black text-[44px] font-bold text-center">
         {breedDetails.name}
       </div>
