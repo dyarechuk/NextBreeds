@@ -1,6 +1,6 @@
 # Breeds
 
-[DEMO LINK](https://sinova-breeds.vercel.app/)
+[DEMO LINK](https://next-breeds.vercel.app/)
 
 This project is designed to allow users to view various cat and dog breeds in a card format. Users can also navigate to a detailed page for each breed to learn more about it.
 
